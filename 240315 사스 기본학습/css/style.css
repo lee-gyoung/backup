@@ -1,0 +1,119 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+mixin
+사스에서 자주 사용하는 코드로 재사용할 수 있도록 하는 방법
+기본값으로 코드를 만들고 믹스인 호출시에 값을 넣어서 대체값으로도 사용할 수 있음 */
+section {
+  width: 100%;
+  padding: 100px 0px;
+}
+section .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+section .inner:hover .wrap article {
+  opacity: 1;
+  transform: translateY(0px);
+}
+section .inner h1 {
+  font: bold 22px/1 "arial";
+  color: #555;
+  margin-bottom: 50px;
+  text-align: center;
+}
+section .inner .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+section .inner .wrap article {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+  transition: 0.5s;
+  transform: translateY(150px);
+  opacity: 0;
+}
+section .inner .wrap article:nth-of-type(1) {
+  transition-delay: 0s;
+}
+section .inner .wrap article:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+section .inner .wrap article:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+section .inner .wrap article:nth-of-type(4) {
+  transition-delay: 0.6s;
+}
+section .inner .wrap article:last-child {
+  margin-right: 0px;
+}
+section .inner .wrap article .pic {
+  width: 100%;
+  height: 120px;
+  background-color: #555;
+  margin-bottom: 20px;
+}
+section .inner .wrap article h2 {
+  font: bold 16px/1 "arial";
+  color: #555;
+}
+section .inner .wrap article p {
+  font: 12px/1.3 "arial";
+  color: #777;
+  margin-bottom: 30px;
+}
+section .inner .wrap article a {
+  display: block;
+  width: 150px;
+  height: 30px;
+  font-size: 12px;
+  font-family: arial;
+  color: #555;
+  line-height: 30px;
+  text-align: center;
+  background-color: aqua;
+  border-radius: 10px;
+}
+section .inner .wrap article:nth-child(2) a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  font-family: arial;
+  color: #555;
+  line-height: 30px;
+  text-align: center;
+  background-color: red;
+  border-radius: 10px;
+}
+section .inner .wrap article:nth-child(3) a {
+  display: block;
+  width: 80px;
+  height: 30px;
+  font-size: 10px;
+  font-family: arial;
+  color: #555;
+  line-height: 30px;
+  text-align: center;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

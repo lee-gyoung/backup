@@ -1,0 +1,287 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+body {
+	font-size: 14px;
+	font-family: '돋움', sans-serif;
+	color: #333;
+	background-color: #fff;
+}
+
+.popup {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	width: 500px;
+	padding: 20px;
+	padding-bottom: 50px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	z-index: 10;
+	/* 모든 z-index 수치 중 가장 높게 줘야함 */
+}
+.popup h2 {
+	font-weight: bold;
+	font-size: 27px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.popup div span {
+	font-size: 18px;
+	line-height: 1.8;
+	display: block;
+}
+.popup div strong {
+	font-size: 18px;
+	line-height: 1.8;
+}
+.popup button {
+	padding: 5px 10px;
+	background-color: #333;
+	color: #fff;
+	display: block;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+header {
+	width: 100%;
+}
+header .inner {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+}
+header .inner h1 {
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+}
+
+header .inner nav {
+	width: 800px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+	background-color: #fff;
+}
+
+.gnb > li {
+	/* gnb는 float 사용하는 게 좋음 flex 적용안될 때가 많음 */
+	float: left;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	/* border: 1px solid pink;
+    이곳에 border를 주면 전체 너비가 줄어서 .submenu의 너비값도
+    같이 줄어듦 따라서 여백이 생겨버림 */
+}
+.gnb > li:hover {
+	background-color: lightsteelblue;
+}
+.gnb > li > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #000;
+}
+
+.submenu {
+	background-color: beige;
+	display: none;
+}
+.submenu li {
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	font-weight: normal;
+}
+.submenu > li:hover {
+	background-color: pink;
+}
+
+#slide_box {
+	width: 100%;
+	height: 300px;
+}
+#slide {
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#slide .container {
+	width: 3600px;
+	/* width값 300%로도 표현 가능 */
+	height: 300px;
+	position: relative;
+	left: -1200px;
+}
+#slide .container > li {
+	width: 1200px;
+	height: 300px;
+	float: left;
+}
+
+#contentBox {
+	width: 100%;
+	height: 200px;
+}
+#contentBox .inner {
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#contentBox .inner .tab {
+	flex: 1.5;
+	height: 200px;
+}
+.tab ul {
+	height: 40px;
+	width: 100%;
+}
+.tab > ul li {
+	width: 100px;
+	height: 40px;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	/* cursor: pointer; */
+}
+
+.tab > ul li a {
+	display: block;
+	/* width: 100%;
+	height: 100%; */
+}
+
+.tab > ul li.on {
+	background-color: pink;
+}
+.tab > ul li.on a {
+	color: #444;
+}
+.tab > ul li:hover {
+	background-color: lightcyan;
+}
+.tab > div {
+	height: 160px;
+	display: none;
+}
+.tab > div.on {
+	display: block;
+}
+
+#con1 > ul {
+	width: 100%;
+}
+#con1 > ul li {
+	height: 30px;
+	line-height: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+#con1 > ul li a {
+	margin-left: 20px;
+}
+#con1 > ul li span {
+	margin-right: 20px;
+}
+
+#con2 a {
+	float: left;
+	margin: 5px;
+}
+
+#contentBox .inner .banner {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#contentBox .inner .banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#contentBox .inner .baro {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 5px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#contentBox .inner .baro a {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 10px;
+	/* column으로 적용되어 있어 gap이 위쪽 여백이 적용됨 */
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	/* background-color: aliceblue; */
+	padding: 20px;
+}
+footer .inner {
+	height: 100px;
+	width: 1200px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	/* position보다 flex가 쉬울 수 있어 flex로 적용 */
+	border: 1px solid mediumaquamarine;
+	/* padding: 15px; */
+}
+footer .inner .logo {
+	flex: 1.5;
+	display: flex;
+	justify-content: center;
+	border-right: 1px solid mediumaquamarine;
+	align-items: center;
+}
+footer .inner .copy {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid mediumaquamarine;
+}
+footer .inner .sns {
+	flex: 1;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}

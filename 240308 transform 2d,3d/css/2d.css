@@ -1,0 +1,102 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	/* box-sizing: border-box; */
+}
+ol,
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+section {
+	width: 100%;
+}
+section article {
+	width: 200px;
+	height: 200px;
+	border: 5px solid #000;
+	float: left;
+	margin: 50px;
+	position: relative;
+}
+section article div {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(80, 80, 143);
+	opacity: 0.7;
+	/* opacity 값이 0이면 투명해서 보이진 않으나 공간은 차지함 */
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/* .box2 div {
+	transform: translateX(50px);
+} */
+.box2 div:hover {
+	transform: translateX(50px);
+	transition: all 1s;
+}
+/* transform : translateX
+이동에 관련된 내용, x축으로 이동하고 방향에 양수 음수가 적용됨 */
+
+/* .box3 div {
+	transform: translateY(50px);
+} */
+.box3 div:hover {
+	transform: translateY(50px);
+	transition: all 1s;
+}
+.box4 div {
+	transform: translate(30px, 30px);
+}
+/* .box5 div {
+	transform: scaleX(1.5); 
+}*/
+/* scale은 축소 또는 확대하는 것으로 1보다 큰 값이면 확대,
+1보다 작은 값이면 축소됨 
+scaleX는 x축으로만 적용, scaleY는 y축으로만 적용
+scale은 모든 방향으로 적용하며 값은 하나만 적음*/
+.box5 div:hover {
+	transform: scaleX(0.5);
+	transition: all 1s;
+}
+
+.box6 div {
+	transform: scaleY(0.5);
+}
+.box7 div {
+	transform: scale(1.5);
+}
+/* .box8 div {
+	transform: rotate(30deg);
+} */
+/* 회전에 관련된 내용, 단위는 deg, x/y는 3차원임 */
+.box8 div:hover {
+	transform: rotate(30deg);
+	transition: all 0.5s;
+}
+.box9 div {
+	transform: translateX(50px) rotate(30deg);
+}
+.box10 div {
+	transform: rotate(30deg) translateX(50px);
+}
+/* transform은 한번에 여러 효과를 적용할 수 있음
+하지만 여러 효과를 적용할 때 순서에 따라서 결과가 달라짐
+따라서 원하는 효과를 얻기 위해 적용시키는 순서에 주의해야함 */
+
+.box11 div {
+	transform: skewX(30deg);
+}
+.box12 div {
+	transform: skewY(30deg);
+}
+.box13 div {
+	transform: skew(45deg);
+	/* skew는 왜곡하는 효과, 해당 도형이나 개체를 비틀어서
+    기울이는 형태로 만듦 (잘 안쓰지만 특정 상황에서 더러 사용함)
+    skew 90deg 주면 아예 눈에서 사라짐 */
+}

@@ -1,0 +1,549 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.hidden {
+	position: absolute;
+	top: -9999999999999px;
+	opacity: 0;
+}
+
+#header {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+#header .inner {
+	width: 1180px;
+	height: 120px;
+	margin: 0 auto;
+	/* background-color: #ccc; */
+	position: relative;
+}
+#header .inner h1 {
+	position: absolute;
+	bottom: 15px;
+	left: 0px;
+}
+#header .inner h1 a {
+	/* 그냥 h1 선택해서 코딩하면 제대로 안 먹히기 때문에 정확한 경로 적어줘야함 */
+	font: bold 24px/1 'arial';
+	color: #444;
+}
+
+#header .inner .menuWeb #gnb {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	display: flex;
+}
+#header .inner .menuWeb #gnb li a {
+	display: block;
+	padding: 14px;
+	/* background-color: #777; */
+	font: bold 14px/1 'arial';
+	color: #777;
+	/* transition: all 0.5s;
+	border-radius: 25px;
+	margin: 2px; */
+}
+#header .inner .menuWeb #gnb li a:hover {
+	background-color: #777;
+	color: #fff;
+	/* transform: translateY(-10px); */
+}
+
+#header .inner .menuWeb .util {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	display: flex;
+	gap: 20px;
+	/* gap은 flex상황에서만 쓸 수 있는 요소 간의 거리를 부여하는 방법 */
+}
+#header .inner .menuWeb .util li a {
+	font: 12px/1 'arial';
+	color: #999;
+}
+
+#header .inner .btnCall {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	display: none;
+	/*  */
+	width: 20px;
+	height: 20px;
+}
+#header .inner .btnCall span {
+	position: absolute;
+	text-indent: -99999999999px;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	top: 50%;
+	margin-top: -1px;
+}
+#header .inner .btnCall::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#header .inner .btnCall::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#header .inner .menuMo {
+	width: 270px;
+	height: 100vh;
+	background-color: #333;
+	position: fixed;
+	top: 0px;
+	left: -270px;
+	/* 0으로 설정해놓고 코딩 한 다음 음수로 바꿔서 숨김 */
+	z-index: 10;
+	padding: 35px 30px;
+}
+#header .inner .menuMo h2 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 30px;
+}
+#header .inner .menuMo h2 a {
+	font: bold 24px/1 'arial';
+	color: #fff;
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#header .inner .menuMo h2 span {
+	font-size: 12px;
+	color: #aaa;
+	display: block;
+	text-align: center;
+}
+#header .inner .menuMo ul li a {
+	display: block;
+	padding: 20px 0px;
+	font: bold 14px/1 '맑은고딕';
+	text-align: center;
+	color: #888;
+}
+
+#visual {
+	width: 100%;
+	height: calc(100vh - 121px);
+	/* 전체 화면 중 헤더 영역을 제외한 만큼을 높이로 지정해줌 */
+	/* overflow: hidden; */
+	background-color: #000;
+}
+#visual video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.4;
+	/* 비디오를 넣을 때 영상 색감이 너무 쨍하다면 비디오 opacity 낮추고
+	해당 영역의 background-color 어둡게 넣어주면 됨 */
+}
+#visual .inner {
+	width: 1180px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#visual .inner h2 {
+	font-weight: 900;
+	font-size: 120px;
+	line-height: 1;
+	font-family: 'arial';
+	color: #fff;
+	margin-bottom: 20px;
+}
+#visual .inner p {
+	font: 16px/1.4 'arial';
+	color: #888;
+	margin-bottom: 80px;
+}
+#visual .inner a {
+	display: block;
+	width: 400px;
+	height: 30px;
+	border: 1px solid #bbb;
+	color: #fff;
+	text-align: center;
+	/* line-height: 30px; */
+	font: bold 11px/30px 'arial';
+	transition: all 0.5s;
+}
+#visual .inner a:hover {
+	background-color: #fff;
+	color: #555;
+}
+
+#news {
+	width: 100%;
+	padding: 200px 0px;
+}
+#news .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#news .inner h2 {
+	font: bold 24px/1 'arial';
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#news .inner .wrap {
+	width: 100%;
+	/* height: 100%; */
+	display: flex;
+	justify-content: space-between;
+}
+#news .inner .wrap article {
+	width: 280px;
+}
+#news .inner .wrap article .pic {
+	/* width: 280px; */
+	width: 100%;
+	height: 120px;
+	/* object-fit: cover; */
+	/* overflow: hidden; */
+	margin-bottom: 10px;
+}
+#news .inner .wrap article .pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#news .inner .wrap article h3 {
+	font: bold 16px/1 'arial';
+	color: #555;
+	margin-bottom: 10px;
+}
+#news .inner .wrap article p {
+	font: normal 14px/1 'arial';
+	color: #555;
+	margin-bottom: 20px;
+}
+
+#brand {
+	width: 100%;
+	padding: 200px 0px;
+	background-color: #eee;
+}
+#brand .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#brand .inner h2 {
+	font: bold 24px/1 'arial';
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/* float으로 구현하는 방법 */
+#brand .inner .wrap {
+	width: 100%;
+}
+#brand .inner .wrap::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+#brand .inner .wrap article:nth-of-type(1) {
+	width: 380px;
+	height: 620px;
+	background-color: #444;
+	margin-right: 20px;
+	padding: 170px 50px 0px;
+	text-align: center;
+	float: left;
+}
+#brand .inner .wrap article:nth-of-type(2) {
+	width: 380px;
+	height: 300px;
+	margin-right: 20px;
+	float: left;
+}
+#brand .inner .wrap article:nth-of-type(2) img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#brand .inner .wrap article:nth-of-type(3) {
+	width: 380px;
+	height: 300px;
+	float: left;
+}
+#brand .inner .wrap article:nth-of-type(3) img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#brand .inner .wrap article:nth-of-type(4) {
+	width: 780px;
+	height: 300px;
+	float: left;
+	margin-top: 20px;
+}
+#brand .inner .wrap article:nth-of-type(4) img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* flex로 구현하는 방법 */
+/* #brand .inner .wrap {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#brand .inner .wrap section:nth-of-type(1) {
+	width: 380px;
+	height: 620px;
+}
+#brand .inner .wrap section:nth-of-type(2) {
+	width: 780px;
+	height: 620px;
+}
+#brand .inner .wrap section:nth-of-type(1) article {
+	width: 100%;
+	height: 100%;
+	background-color: #444;
+	padding: 170px 50px 0px;
+	text-align: center;
+}
+#brand .inner .wrap section:nth-of-type(2) div {
+	width: 100%;
+	height: 300px;
+}
+#brand .inner .wrap section:nth-of-type(2) div:nth-of-type(1) {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20px;
+}
+#brand .inner .wrap section:nth-of-type(2) div:nth-of-type(1) article {
+	width: 380px;
+	height: 300px;
+}
+#brand .inner .wrap section:nth-of-type(2) div:nth-of-type(1) article img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#brand .inner .wrap section:nth-of-type(2) div:nth-of-type(2) article {
+	width: 100%;
+	height: 300px;
+}
+#brand .inner .wrap section:nth-of-type(2) div:nth-of-type(2) article img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */
+
+#brand .inner .wrap article:nth-of-type(1) i {
+	font-size: 100px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+#brand .inner .wrap article:nth-of-type(1) h3 {
+	font: bold 20px/1 'arial';
+	color: #fff;
+	margin-bottom: 30px;
+}
+#brand .inner .wrap article:nth-of-type(1) p {
+	font: 14px/1.3 'arial';
+	color: #999;
+	margin-bottom: 30px;
+}
+#brand .inner .wrap article:nth-of-type(1) a {
+	display: block;
+	width: 150px;
+	height: 30px;
+	border: 1px solid #bbb;
+	margin: 0 auto;
+	/* text-align: center; */
+	font: 11px/30px 'arial';
+	color: #ddd;
+	position: relative;
+	overflow: hidden;
+}
+#brand .inner .wrap article:nth-of-type(1) a::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+	position: absolute;
+	transform: translateX(-130%) skew(-45deg);
+	transition: all 0.5s;
+	/* opacity: 0; */
+}
+#brand .inner .wrap article:nth-of-type(1) a:hover::before {
+	transform: translateX(130%) skew(-45deg);
+	/* opacity: 1; */
+}
+
+#banner {
+	width: 100%;
+	padding: 150px 0px;
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#banner .inner {
+	width: 1180px;
+	margin: 0 auto;
+	text-align: center;
+}
+#banner .inner h2 {
+	font: bold 30px/1 'arial';
+	color: #fff;
+	margin-bottom: 30px;
+}
+#banner .inner p {
+	font: 16px/1.3 'arial';
+	color: #bbb;
+	text-shadow: 3px 3px 3px #000;
+}
+
+#comments {
+	width: 100%;
+	padding: 150px 0px;
+	background-color: #ddd;
+}
+#comments .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#comments .inner h2 {
+	font: bold 24px/1 'arial';
+	/* 기업형 레이아웃이기 때문에 h2태그의 코딩 일관성있게 해줌 */
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#comments .inner ul {
+	width: 100%;
+}
+#comments .inner ul li {
+	width: 100%;
+	border: 1px solid #111;
+	padding: 15px 20px;
+	/* 중요하지 않은 컨텐츠일 경우(존재 자체가 의의인 경우)
+	따로 높이값 주지 않고 패딩으로 가운데 정렬(세로) 가능함 */
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* 같은 칸 안에 두 요소의 글자 크기가 달라서 패딩값 계산이 헷갈릴 경우
+	align-items 써주면 해결됨 */
+}
+#comments .inner ul li a {
+	font: 12px/1 'arial';
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+#comments .inner ul li span {
+	font: 12px/1 'arial';
+	color: #888;
+}
+#comments .inner ul li:hover {
+	background-color: #444;
+}
+#comments .inner ul li:hover a {
+	color: #eee;
+}
+#comments .inner ul li:hover span {
+	color: #fff;
+}
+
+#footer {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #ccc;
+}
+#footer .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#footer .inner::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+#footer .inner h2 {
+	font: bold 24px/1 'arial';
+	color: #666;
+	float: left;
+}
+#footer .inner ul {
+	float: right;
+}
+#footer .inner ul li {
+	float: left;
+	margin-left: 20px;
+}
+#footer .inner ul li a {
+	font: bold 14px/1 'arial';
+	color: #666;
+}
+#footer .inner address {
+	width: 100%;
+	font: 14px/1.3 '맑은고딕';
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	border-top: 2px solid orange;
+	padding-top: 20px;
+}
+#footer .inner p {
+	float: left;
+	width: 100%;
+	font: 12px/1 'arial';
+	color: #777;
+}
+
+@media screen and (max-width: 700px) {
+	#header .inner {
+		width: 100%;
+		/* 고정 픽셀은 %나 뷰포트로 변환 */
+	}
+	#header .inner h1 {
+		left: 30px;
+	}
+	#header .inner .menuWeb {
+		display: none;
+	}
+	#header .inner .btnCall {
+		display: block;
+	}
+}

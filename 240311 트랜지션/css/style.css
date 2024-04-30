@@ -1,0 +1,72 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+section {
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #aaa;
+}
+section .wrap {
+	width: 1180px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+section .wrap article {
+	width: 280px;
+	height: 120px;
+	background-color: orange;
+	transform: translateY(100px);
+	/* opacity: 0; */
+}
+section:hover .wrap article {
+	transform: translateY(0px);
+	opacity: 1;
+	transition: all 1s;
+	background-color: aquamarine;
+	/* transition-duration: ;
+    일정시간을 의미하며 단위는 s, ms단위도 가능하지만 사용하지 않음 */
+	/* transition-property: ;
+    대상, 보통은 all이라고 적으며 때에 따라 특정 대상을 적음
+    예) transition-property: width;
+    => width의 값이 변경되는데 그 값에 트랜지션 적용
+    이때 다른 요소들에는 트랜지션이 적용되지 않고 오직 width에만 적용됨 */
+
+	/* transition-timing-function: cubic-bezier(0.31, -0.58, 0.73, 2.04); */
+	/* linear : 처음부터 끝까지 일정한 가속도 (★)
+        ease : 천천히 시작되어서 빨라지다가 마지막에 다시 느려지는 것
+        ease-in : 효과가 천천히 시작해서 노멀하게 마침
+        ease-out : 효과가 천천히 마치는 것
+        ease-in-out : 효과가 천천히 시작해서 천천히 마치는 것 */
+
+	/* transition-delay: ;
+    지연시간 */
+}
+/* 
+트랜지션이란?
+css속성을 변경할 때 모션이나 애니메이션(★) 속도를 조절하는 방법으로
+속성 변경이 즉시 결과값으로 나타나는 것이 아니라 일정 시간에 걸쳐
+자연스럽게 나타나도록 하는 것 */
+
+section article:nth-of-type(1) {
+	transition-delay: 0s;
+}
+section article:nth-of-type(2) {
+	transition-delay: 0.5s;
+}
+section article:nth-of-type(3) {
+	transition-delay: 1s;
+}
+section article:nth-of-type(4) {
+	transition-delay: 1.5s;
+}

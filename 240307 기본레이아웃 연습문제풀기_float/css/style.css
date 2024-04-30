@@ -1,0 +1,78 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#box {
+	padding: 180px 0 150px;
+}
+
+.inner {
+	width: 1180px;
+	background-color: palevioletred;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+h1 {
+	font: bold 22px/1 'arial';
+	color: lavenderblush;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#box .inner .wrap article {
+	width: 380px;
+	border: 1px solid lavenderblush;
+	float: left;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.wrap::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* 1180px, 580px, 380px, 280px 12컬럼 그리드
+여백은 20px */
+
+#box .inner .wrap article:nth-of-type(3) {
+	margin-right: 0px;
+}
+
+.pic {
+	width: 100%;
+	height: 200px;
+	background-color: pink;
+	margin-bottom: 20px;
+}
+
+#box .inner .wrap article h2 {
+	font: bold 18px/1 'arial';
+	color: lavenderblush;
+	margin-bottom: 10px;
+}
+
+.wrap article p {
+	font: 14px/1.3 'arial';
+	color: lightpink;
+	margin-bottom: 30px;
+}
+
+.wrap article a {
+	font: bold 12px/1 'arial';
+	color: #333;
+	display: block;
+	text-align: right;
+}

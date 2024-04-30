@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+#top {
+  width: 100%;
+  height: 50px;
+}
+#top .inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#top .inner ul {
+  display: flex;
+  gap: 10px;
+}
+#top .inner ul li {
+  font-size: 30px;
+}
+
+#header_wrap {
+  background-color: purple;
+  width: 100%;
+  transition: all 1s;
+}
+#header_wrap.on {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: firebrick;
+  box-shadow: 3px 3px 5px #666;
+}
+#header_wrap .inner {
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+#header_wrap .inner h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#header_wrap .inner .menuWeb {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+#header_wrap .inner .menuWeb ul {
+  display: flex;
+}
+#header_wrap .inner .menuWeb ul li {
+  width: 20%;
+}
+#header_wrap .inner .menuWeb ul li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+}
+#header_wrap .inner .menuWeb ul li a:hover {
+  background-color: beige;
+  color: purple;
+}
+#header_wrap .inner .btnCall {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  color: #fff;
+  transform: translateY(-50%);
+  font-size: 30px;
+  display: none;
+}
+#header_wrap .inner .btnCall:hover {
+  color: pink;
+}
+#header_wrap .inner .menuMo {
+  display: none;
+  width: 50%;
+  height: 100%;
+  background-color: purple;
+  position: fixed;
+  top: 0;
+  right: -60%;
+  transition: all 0.5s;
+  z-index: 50;
+  padding: 50px;
+}
+#header_wrap .inner .menuMo.on {
+  right: 0px;
+}
+#header_wrap .inner .menuMo ul {
+  width: 100%;
+}
+#header_wrap .inner .menuMo ul li {
+  height: 80px;
+}
+#header_wrap .inner .menuMo ul li a {
+  font: 25px/50px "Noto Sans KR";
+  color: #fff;
+}
+#header_wrap .inner .menuMo .close {
+  position: absolute;
+  top: 15px;
+  right: 102%;
+  font-size: 40px;
+  color: pink;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #aaa;
+}
+
+@media screen and (max-width: 1000px) {
+  #top {
+    display: none;
+  }
+  #header_wrap .inner {
+    width: 100%;
+  }
+  #header_wrap .inner h1 {
+    margin-left: 30px;
+  }
+  #header_wrap .inner .menuWeb {
+    display: none;
+  }
+  #header_wrap .inner .btnCall {
+    display: block;
+  }
+  #header_wrap .inner .menuMo {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

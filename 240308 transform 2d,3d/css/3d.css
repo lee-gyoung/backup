@@ -1,0 +1,67 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/* main {
+	width: 600px;
+	height: 600px;
+	background-color: salmon;
+	border: 5px solid #000;
+	position: relative;
+}
+main div {
+	width: 100px;
+	height: 100px;
+	background-color: seagreen;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+
+section {
+	width: 100%;
+}
+section article {
+	width: 200px;
+	height: 200px;
+	border: 5px solid #000;
+	margin: 50px;
+	position: relative;
+	perspective: 900px;
+	/* perspective 추천값 : 700~1600px */
+}
+section article div {
+	width: 100%;
+	height: 100%;
+	background-color: salmon;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box1 div {
+	transform: rotateX(0deg);
+	transition: all 1s;
+	transform-origin: top;
+}
+.box1 div:hover {
+	transform: rotateX(60deg);
+}
+.box2 div {
+	transform: rotateY(0deg);
+	transition: all 0.5s;
+	transform-origin: center left;
+}
+.box2 div:hover {
+	transform: rotateY(45deg);
+}
+
+.box3 div {
+	transform: translateZ(0px);
+	transition: all 0.5s;
+}
+.box3 div:hover {
+	transform: translateZ(300px);
+}

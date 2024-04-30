@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #777;
+}
+body {
+	font-family: 'Baloo Chettan 2';
+	color: #000;
+}
+
+header {
+	position: relative;
+	//
+	left: 0;
+	top: 0;
+	width: 100%;
+	transition: 0.5s;
+	background-color: #fff;
+	z-index: 10;
+	border-bottom: 1px solid #f0f0f0;
+	display: flex;
+	.logo {
+		width: 240px;
+		height: 74px;
+		// background-color: #aaa;
+		padding: 10px;
+		box-sizing: border-box;
+		.link_logo {
+			// background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			transition: all 0.3s;
+			position: relative;
+			.img {
+				width: 100%;
+			}
+			&::before {
+				content: '';
+				width: 50%;
+				height: 2px;
+				background-color: #000;
+				position: absolute;
+				top: 15px;
+				left: 0;
+				transition: all 0.3s;
+			}
+			&:after {
+				content: '';
+				width: 50%;
+				height: 2px;
+				background-color: #000;
+				position: absolute;
+				bottom: 15px;
+				right: 0;
+				transition: all 0.3s;
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.wrap_gnb {
+		flex: 7;
+		#gnb {
+			// display: flex;
+			float: left;
+			> li {
+				float: left;
+				position: relative;
+				a {
+					display: block;
+					height: 100%;
+					padding: 0 30px;
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 74px;
+					transition: all 0.3s;
+					&:hover,
+					&.on {
+						background-color: #a37f64;
+						color: #fff;
+					}
+				}
+				ul {
+					display: none;
+					// display: block;
+					position: absolute;
+					width: 100%;
+
+					li {
+						a {
+							text-align: center;
+							font-size: 14px;
+							font-weight: normal;
+						}
+					}
+				}
+			}
+		}
+	}
+	.list_sns {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #eee;
+		gap: 20px;
+		li {
+			width: 28px;
+			height: 26px;
+			.link {
+				display: block;
+				text-indent: -9999px;
+				width: 100%;
+				height: 100%;
+				background-color: #a37f64;
+				background: url(../images/sns.png) no-repeat 0px 0px;
+				background-size: 90px auto;
+				// background-size: 전체 이미지의 너비/2 auto(종횡비를 따지면 auto 아닐 시 정확한 높이값);
+			}
+			&:nth-of-type(1) {
+				.link {
+					background-position: 0px 0px;
+				}
+			}
+			&:nth-of-type(2) {
+				.link {
+					background-position: -30px 0px;
+				}
+			}
+			&:nth-of-type(3) {
+				.link {
+					background-position: -60px 0px;
+				}
+			}
+		}
+	}
+}

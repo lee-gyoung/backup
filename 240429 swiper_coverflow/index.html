@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/c12878d3ba.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<section class="gallery">
+			<h1>UI/UX <span>PORTFOLIO</span></h1>
+			<ul class="auto">
+				<li class="btnStart">
+					<i class="fa-solid fa-play"></i>
+				</li>
+				<li class="btnPaused">
+					<i class="fa-solid fa-pause"></i>
+				</li>
+			</ul>
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="inner">
+						<div class="con">
+							<img src="./images/pic1.png" alt="밑에서 바라본 빌딩사진" />
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Inventore, magni?
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="inner">
+						<div class="con">
+							<img src="./images/pic2.png" alt="밑에서 바라본 빌딩사진" />
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Inventore, magni?
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="inner">
+						<div class="con">
+							<img src="./images/pic3.png" alt="밑에서 바라본 빌딩사진" />
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Inventore, magni?
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="inner">
+						<div class="con">
+							<img src="./images/pic4.png" alt="밑에서 바라본 빌딩사진" />
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Inventore, magni?
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="inner">
+						<div class="con">
+							<img src="./images/pic5.png" alt="밑에서 바라본 빌딩사진" />
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Inventore, magni?
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</section>
+
+		<script>
+			var swiper = new Swiper('.gallery', {
+				effect: 'coverflow',
+				// effect: 어떤 이펙트인지를 작성하는 것 지금 예제는 coverflowEffect를 하고 있으며
+				// 이 값에 따라 아래에 추가되는 이펙트 조정 키값이 달라짐
+				grabCursor: true,
+				// 커서의 모양이 손바닥 모양이 되게 함
+				centeredSlides: true,
+				// 활성화 된 슬라이드 내용을 화면 가운데로 오게 하는 것
+				// 이걸 쓰기 때문에 left 좌표값을 주지 않아도 됨
+				slidesPerView: 'auto',
+				// 화면에 보여지는 슬라이더의 갯수를 어떻게 할지 결정.
+				// auto: 브라우저의 크기에 맞춰서 보여주겠다는 의미
+				coverflowEffect: {
+					rotate: 50, //슬라이더의 회전각도
+					stretch: -100, //슬라이더 간의 거리
+					depth: 400, //슬라이더 회전각도에 따른 효과
+					modifier: 1, //위의 여러 효과의 배수를 지정 ( 1이 제일 좋음 )
+					slideShadows: false, //슬라이더의 그림자 효과 여부
+				},
+				pagination: {
+					el: '.swiper-pagination', //페이지 네이션을 적용시킬 클래스 이름 지정
+					type: 'fraction', //타입을 지정함, fracrion은 숫자를 보이게 함
+				},
+				loop: true, //무한 루프 슬라이더를 작성하겠다는 의미
+				spaceBetween: 0, //슬라이드 사이 간격을 0으로 지정하겠다는 의미
+				autoplay: {
+					delay: 2500, //페이지가 로딩된 후 2.5초 딜레이를 가짐 (로딩이 느릴 경우에도 사용자가 1페이지부터 볼 수 있도록)
+					disableOnInteraction: true, //오토플레이 중 사용자의 개입 시 자동으로 움직이는 것을 멈출 것인지의 여부
+					// true는 개입하면 멈추겠다는 의미
+				},
+				speed: 1000, //슬라이딩 되는 속도
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
+	</body>
+</html>

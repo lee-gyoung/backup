@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #333;
+	font-size: 16px;
+}
+
+#top {
+	width: 100%;
+	height: 50px;
+	.inner {
+		width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		ul {
+			display: flex;
+			gap: 10px;
+			li {
+				font-size: 30px;
+			}
+		}
+	}
+}
+#header_wrap {
+	background-color: purple;
+	width: 100%;
+	transition: all 1s;
+	&.on {
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 90;
+		background-color: firebrick;
+		box-shadow: 3px 3px 5px #666;
+	}
+
+	.inner {
+		width: 1200px;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+		h1 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			// 로고 이미지 사이즈가 지금처럼 크지 않으면 너비/높이값, img에 100%, objectfit 따로 안줘도 무방함
+		}
+		.menuWeb {
+			width: 60%;
+			position: absolute;
+			top: 50%;
+			right: 0%;
+			transform: translateY(-50%);
+			ul {
+				display: flex;
+				li {
+					width: 20%;
+					a {
+						display: block;
+						width: 100%;
+						height: 50px;
+						font-size: 24px;
+						line-height: 50px;
+						color: #fff;
+						// color: inherit; > 색상을 상속 받아서 씀
+						text-align: center;
+						border-radius: 20px;
+						&:hover {
+							background-color: beige;
+							color: purple;
+						}
+					}
+				}
+			}
+		}
+		.btnCall {
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			color: #fff;
+			transform: translateY(-50%);
+			font-size: 30px;
+			display: none;
+			&:hover {
+				color: pink;
+			}
+		}
+		.menuMo {
+			display: none;
+			width: 50%;
+			height: 100%;
+			background-color: purple;
+			position: fixed;
+			top: 0;
+			right: -60%;
+			transition: all 0.5s;
+			z-index: 50;
+			padding: 50px;
+			&.on {
+				right: 0px;
+			}
+			ul {
+				width: 100%;
+				li {
+					height: 80px;
+					a {
+						font: 25px/50px 'Noto Sans KR';
+						color: #fff;
+					}
+				}
+			}
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 102%;
+				font-size: 40px;
+				color: pink;
+			}
+		}
+	}
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+	background-color: #aaa;
+}
+
+@media screen and (max-width: 1000px) {
+	#top {
+		display: none;
+	}
+	#header_wrap {
+		.inner {
+			width: 100%;
+			h1 {
+				margin-left: 30px;
+			}
+			.menuWeb {
+				display: none;
+			}
+			.btnCall {
+				display: block;
+			}
+			.menuMo {
+				display: block;
+			}
+		}
+	}
+}

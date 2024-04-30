@@ -1,0 +1,113 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	list-style: none;
+	color: #333333;
+}
+
+.wrap {
+	width: 1000px;
+	height: 650px;
+	background-color: #2d1e2a;
+	display: flex;
+	position: relative;
+}
+
+.wrap .pop {
+	width: 500px;
+	height: 200px;
+	background-color: #edb5be;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.wrap header {
+	width: 250px;
+	height: 100%;
+	background-color: #251a25;
+}
+.wrap header h1 {
+	width: 100%;
+	height: 200px;
+	background-color: #d8819e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrap header nav {
+	width: 100%;
+	height: 300px;
+	background-color: #805473;
+}
+
+.wrap main {
+	width: 750px;
+	height: 100%;
+	background-color: #c46285;
+}
+
+.wrap main #slide {
+	width: 750px;
+	/* width값 100% 줘도 무방 */
+	height: 350px;
+	background-color: #4e354b;
+}
+
+.wrap main #content {
+	width: 100%;
+	height: 200px;
+	background-color: #5b4c56;
+	display: flex;
+}
+.wrap main #content .notice {
+	flex: 1.5;
+	height: 100%;
+	background-color: #edb5be;
+}
+.wrap main #content .gallery {
+	flex: 1;
+	height: 100%;
+	background-color: #251a25;
+}
+.wrap main #content .banner {
+	flex: 1;
+	height: 100%;
+	background-color: #d8819e;
+}
+
+.wrap main footer {
+	width: 100%;
+	height: 100px;
+	display: flex;
+}
+.wrap main footer h2 {
+	flex: 1;
+	height: 100%;
+	background-color: #d8819e;
+}
+.wrap main footer .footer_content {
+	flex: 8;
+	height: 100%;
+	background-color: #c46285;
+}
+.wrap main footer .footer_content .menu {
+	width: 100%;
+	height: 50px;
+	background-color: #805473;
+}
+.wrap main footer .footer_content .copy {
+	width: 100%;
+	height: 50px;
+	background-color: #4e354b;
+}

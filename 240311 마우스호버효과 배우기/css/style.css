@@ -1,0 +1,103 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#box1 {
+	width: 100%;
+	background-color: #eee;
+	padding: 100px 0px;
+}
+#box1 .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#box1 .inner h1 {
+	font: bold 22px/1 'arial';
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#box1 .inner .wrap {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#box1 .inner .wrap article {
+	width: 280px;
+	height: 200px;
+	overflow: hidden;
+	/* 넘치는 부분 숨기기 */
+}
+#box1 .inner .wrap article img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 1s;
+}
+#box1 .inner .wrap article:hover img {
+	transform: scale(1.2);
+}
+
+#box2 {
+	width: 100%;
+	background-color: #eee;
+	padding: 100px 0px;
+}
+#box2 .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#box2 .inner h1 {
+	font: bold 22px/1 'arial';
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#box2 .inner .wrap {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#box2 .inner .wrap article {
+	width: 280px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+#box2 .inner .wrap article img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 1s;
+}
+#box2 .inner .wrap article:hover img {
+	transform: scale(1.2);
+}
+#box2 .inner .wrap article p {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	text-align: center;
+	font: 14px/50px '맑은고딕';
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	transition: all 1s;
+	transform: translateY(100%);
+}
+#box2 .inner .wrap article:hover p {
+	transform: translateY(0%);
+	transform-origin: bottom;
+}

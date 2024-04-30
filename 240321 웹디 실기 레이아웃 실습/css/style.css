@@ -1,0 +1,158 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+.container {
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+
+.pop {
+	width: 400px;
+	height: 300px;
+	background-color: #251a25;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+}
+
+header {
+	width: 100%;
+}
+header .inner {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #edb5be;
+	position: relative;
+}
+header .inner h1 {
+	width: 200px;
+	height: 40px;
+	background-color: #d8819e;
+	text-align: center;
+	font: bold 20px/40px 'arial';
+	color: #000;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+}
+header .inner .wrap {
+	width: 800px;
+	height: 50px;
+	background-color: #c46285;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	display: flex;
+}
+header .inner .wrap .menu {
+	width: 200px;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+	color: #eee;
+	transition: all 0.5s;
+}
+header .inner .wrap .menu:hover:nth-of-type(1) {
+	background-color: #edb5be;
+	color: #251a25;
+}
+header .inner .wrap .menu:hover:nth-of-type(2) {
+	background-color: #edb5be;
+	color: #251a25;
+}
+header .inner .wrap .menu:hover:nth-of-type(3) {
+	background-color: #edb5be;
+	color: #251a25;
+}
+header .inner .wrap .menu:hover:nth-of-type(4) {
+	background-color: #edb5be;
+	color: #251a25;
+}
+
+#slide {
+	width: 100%;
+}
+#slide .inner {
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: #805473;
+}
+
+#contentBox {
+	width: 100%;
+}
+#contentBox .inner {
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+	background-color: #859f9e;
+	display: flex;
+}
+#contentBox .inner .board {
+	flex: 1.5;
+	height: 100%;
+	background-color: #edb5be;
+}
+#contentBox .inner .banner {
+	flex: 1;
+	height: 100%;
+	background-color: #d8819e;
+}
+#contentBox .inner .baro {
+	flex: 1;
+	height: 100%;
+	background-color: #4e354b;
+}
+
+footer {
+	width: 100%;
+}
+footer .inner {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #cc948c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .inner h2 {
+	flex: 1;
+	height: 40px;
+	background-color: #251a25;
+}
+footer .inner .copy {
+	flex: 4;
+	height: 60px;
+	background-color: #c46285;
+}
+footer .inner .sns {
+	flex: 1;
+	height: 80px;
+	background-color: #805473;
+}

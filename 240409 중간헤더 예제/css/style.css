@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: thistle;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+nav article {
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+nav article > a {
+  font: 12px/50px "Turret Road";
+  color: #aaa;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+}
+nav article div {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  opacity: 0;
+  transform: scale(0) rotateY(150deg);
+  transition: all 0.5s;
+  padding: 10px;
+  cursor: pointer;
+  /*
+  p, span, div의 상황별 사용
+  => 취업 후엔 회사 내규에 따름
+  => 현재는 문자 사용시 span이나 p를 사용하지만 span은 인라인 속성이니
+  블록 속성이 필요할 땐 p나 div를 쓰면 됨
+  */
+}
+nav article div p {
+  width: 100%;
+  height: 90px;
+}
+nav article div p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+nav article div h2 {
+  height: 50px;
+  font: bold 12px/50px "Turret Road";
+  color: #fff;
+  letter-spacing: 1px;
+}
+nav article div ul {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+nav article div ul li {
+  width: 100%;
+  text-transform: uppercase;
+}
+nav article div ul li a {
+  font-size: 12px/1 "Turret Road";
+  color: #000;
+  letter-spacing: 1px;
+}
+nav article div ul li a:hover {
+  color: chocolate;
+}
+nav article:hover > a {
+  margin-left: -100px;
+  opacity: 0;
+}
+nav article:hover div {
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

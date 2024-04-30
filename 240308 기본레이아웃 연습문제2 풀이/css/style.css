@@ -1,0 +1,85 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#box {
+	padding: 100px 0 150px;
+}
+#box .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+#box .inner h1 {
+	font: bold 22px/1 'arial';
+	color: #555;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#box .inner .wrap {
+	display: flex;
+	justify-content: space-between;
+}
+#box .inner .wrap article {
+	width: 280px;
+	border: 1px solid #888;
+	padding: 20px;
+	position: relative;
+}
+#box .inner .wrap article .pic {
+	width: 100%;
+	/* 기본적으로 부모의 너비 전체를 가짐
+    그러나 box-sizing으로 계산된 패딩 값이 빠진 것으로 계산 됨 */
+	height: 200px;
+	background-color: #aaa;
+	margin-bottom: 20px;
+}
+h2 {
+	font: bold 18px/1 'arial';
+	color: #555;
+	margin-bottom: 10px;
+}
+p {
+	font: 14px/1.5 'arial';
+	color: #000;
+	margin-bottom: 30px;
+}
+a {
+	/* a태그는 버튼으로 커스텀 가능 */
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: orange;
+	border-radius: 15px;
+	/* text-align: center; */
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	border: 2px solid orangered;
+
+	/* 버튼에서 글자 가운데 정렬하는 법1 */
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+
+	/* 버튼에서 글자 가운데 정렬하는 법2 */
+	text-align: center;
+	/* line-height: 30px; */
+	font: 15px/30px 'arial';
+	color: #fff;
+}
+
+a:hover {
+	background-color: orangered;
+	border-color: orange;
+	/* 이런 요소를 추가하는 것이 웹 접근성에 좋을 수 있음 */
+}

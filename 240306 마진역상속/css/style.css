@@ -1,0 +1,36 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#wrap {
+	width: 100%;
+	height: 100vh;
+	/* 전체화면을 만드는 것
+    100vh의 vh란?
+    현재 브라우저의 높이를 100등분하여 그 중 1개를 1vh라고 매김
+    고로 100vh란 현재 브라우저 높이의 전체라는 의미 */
+	background-color: aqua;
+	/* border: 1px solid red; */
+}
+
+#wrap .box {
+	width: 400px;
+	height: 400px;
+	background-color: brown;
+	/* margin: 100px auto; */
+}
+
+/* 마진 역상속이란?
+부모 블록요소에서 첫번째 자식 블록요소에 마진 탑이 설정되면
+설정된 값이 부모 요소로 역상속되는 현상을 말함
+따라서 패딩값을 주는 것이 좋음
+ */

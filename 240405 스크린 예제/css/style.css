@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#gallery {
+  width: 100%;
+  height: 100vh;
+}
+#gallery h1 {
+  font: bold 30px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 15vh;
+  left: 5vw;
+  z-index: 5;
+}
+#gallery .showBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#gallery .showBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#gallery .controls {
+  width: 60%;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  right: 0px;
+  bottom: 20vh;
+}
+#gallery .controls ul {
+  display: flex;
+  gap: 20px;
+}
+#gallery .controls ul li a {
+  font: bold 12px/1 "arial";
+  color: #777;
+}
+#gallery .controls ul li.on a {
+  color: #fff;
+}
+#gallery .controls div {
+  margin: 20px;
+  font-size: 14px;
+  color: #888;
+}
+#gallery .controls div strong {
+  font-size: 40px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

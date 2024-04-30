@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<!-- 클래스 선택자 -->
+		<div class="txt">div</div>
+		<span class="txt">span</span>
+		<br />
+
+		<!-- both 클래스 선택자 -->
+		<strong class="txt text">strong</strong>
+
+		<!-- 자손 선택자 -->
+		<div class="div">
+			<div class="child_div">자손선택자</div>
+		</div>
+
+		<!-- 아이디 선택자 -->
+		<div id="txt">고유한 아이디</div>
+
+		<!-- 요소 선택자(태그 선택자) -->
+		<em>em태그 밖</em>
+		<section>
+			<em>em태그 안</em>
+		</section>
+
+		<!-- 직계 자식(자손)선택자 -->
+		<div class="txt2">
+			<p>돈까스</p>
+			<div>
+				<p>짜장면</p>
+			</div>
+		</div>
+
+		<!-- and로 연결하는 방법 -->
+		<div class="p">divp</div>
+		<div class="s">divs</div>
+
+		<!-- 상태선택자
+            어떤 태그의 상태를 구분하는 내용을 ':' 다음으로 담아서
+            css에서 호출함-->
+		<input type="checkbox" name="" id="" />
+
+		<!-- 인접 형제 선택자 -->
+		<h1>무슨색이 보이시나</h1>
+
+		<!-- 일반 형제 선택자 -->
+		<h3>title</h3>
+		<ul>
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+		</ul>
+		<ul>
+			<li>list1</li>
+			<li>list2</li>
+			<li>list3</li>
+		</ul>
+
+		<!-- 속성 선택자 -->
+		<form action="">
+			<input type="email" name="" id="" />
+		</form>
+
+		<a href="">link</a>
+		<a href="http://naver.com" target="_blank">naver</a>
+		<a href="http://daum.net" target="_self">daum</a>
+		<a href="" target="_blank">nate</a>
+
+		<h2 class="main_txt1">title1</h2>
+		<h2 class="main_index com">title2</h2>
+		<h2 class="content_txt2">title3</h2>
+		<h2 class="main_txt2">title4</h2>
+
+		<!-- 가상 선택자 -->
+		<br /><br /><br />
+		<div class="able">가상선택자</div>
+
+		<!-- css 선택자 우선순위 -->
+		<p class="list">우선순위</p>
+		<p class="list">판독중</p>
+		<!-- <p class="list" style="font-size: 50px">판독중</p> -->
+		<p class="list" id="list">id</p>
+	</body>
+</html>

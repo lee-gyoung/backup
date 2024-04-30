@@ -1,0 +1,116 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/* 
+웹페이지 혹은 웹 어플리케이션에는 크게 2가지 종류가 있음(형태 구분)
+1. 반응형 웹사이트
+    사용자의 디바이스에 따라 미디어쿼리가 적용된 css가 보여짐으로써
+    같은 코드로 다양한 디바이스 환경에 같은 느낌의 홈페이지를 
+    경험할 수 있게 하는 구현방식 
+    장점 : 거의 동일한 html의 코드로 구현하기 때문에 2개의 디바이스를
+    커버할 경우 약 1.5배의 노동력이 듦 > 비용절감 가능
+    단점 : 하나의 디바이스의 전문적인 UI나 컨텐츠 소화 능력은 부족함
+    따라서 UX의 만족도를 최상으로 하기에는 한계가 있음
+
+2. 적응형 웹사이트 (주소가 2개 이상)
+    미디어쿼리를 사용하지 않고, 디바이스에 따른 모바일, 태블릿, 데스크탑의
+    완전히 다른 주소와 사이트를 만들어서 최상의 UX를 제공하는 구현방식
+    장점: UX를 최상으로 끌어올릴 수 있음
+    단점 : 비쌈
+*/
+
+#box {
+	width: 300px;
+	height: 300px;
+	background-color: pink;
+	margin: 100px auto;
+	transition: all 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+	/* 기본적으로 웹 버전에 작성한 코드는 유지됨
+	그러나 미디어 쿼리 부분에 코드를 작성하게 되면 기존에 있던 값에 덮어쓰게 됨
+	(해당 영역에 추가적으로 적용)
+	= 미디어 쿼리에 작성하지 않은 부분은 웹 버전의 코드 내용으로 유지됨
+	width: 300px; => width: 50%; 로 변경
+	height: 300px; => 유지
+	이런식
+	border-radius: 10px; => 미디어 쿼리 부분에만 추가한 것은 이 영역에서만 적용
+	*/
+	#box {
+		width: 50%;
+		background-color: aqua;
+		border-radius: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	/* 위의 900px을 태블릿 버전, 400px을 모바일 버전이라고 치면
+	900px에서 추가된 내용은(border-radius) 모바일 구간에 유지되므로
+	만약 추가된 내용을 없애고자 한다면 밑의 border-radius:0px 처럼 초기화 해줘야 함
+	 */
+	#box {
+		width: 80vw;
+		height: 500px;
+		background-color: red;
+		border-radius: 0px;
+		border-color: aqua;
+		border-width: 3px;
+	}
+}
+
+/* 
+반응형 웹사이트, 미디어쿼리 적용시 규칙
+1. 모든 디바이스의 전용 UI에 대한 내용은 웹(데스크탑) 전용 html에 코딩 되어야 함
+이후 디바이스 별로 전문적인 내용은 따로 적용
+예) 모바일 전용 햄버거 버튼(bars)의 경우에도 웹에 코딩하고, 보이지 않게 처리한 뒤
+모바일 디바이스에서 보이도록 미디어쿼리 구간에서 보이게 후처리 함
+
+2. 웹 전용에서는 고정px을 사용했더라도 미디어쿼리에서는 %나 뷰포트를 적용해야함
+예) 웹 전용에서 width: 1000px;이었다면
+미디어쿼리를 사용한 특정 구간에서는 100%로 변경해야 함
+
+뷰포트란?
+vw, vh, vmax, vmin
+vh : 브라우저의 세로폭을 백등분한 단위로 
+디바이스의 높이가 1024px이라면? 1 vh은 10.24px인것
+vw : 브라우저의 가로폭을 백등분한 단위
+vmax : 브라우저의 긴 폭을 기준으로 백등분한 단위
+vmin : 브라우저의 짧은 폭을 기준으로 백등분한 단위
+*/
+
+div {
+	width: 100%;
+	height: 100vh;
+}
+div span {
+	color: #fff;
+}
+.box1 {
+	background-color: pink;
+}
+.box1 span {
+	font-size: 30px;
+}
+.box2 {
+	background-color: lightblue;
+}
+.box2 span {
+	font-size: 10vw;
+}
+.box3 {
+	background-color: lightgreen;
+}
+.box3 span {
+	font-size: 10vmax;
+}

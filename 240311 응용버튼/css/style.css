@@ -1,0 +1,155 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.prev {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+	position: relative;
+	margin: 20px;
+	float: left;
+}
+
+.prev::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: rotate(-30deg);
+	transform-origin: left center;
+}
+
+.prev::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	transform: rotate(30deg);
+	transform-origin: left center;
+}
+
+.prev strong {
+	/* display: block;
+	font: 30px/100px '맑은고딕';
+	text-align: center; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(100%, -50%);
+	transition: all 0.5s;
+	/* 트랜지션은 상태 선택자가 붙지 않은 오리지널에 부여함 */
+	opacity: 0;
+}
+
+/* .prev:hover strong
+prev에 마우스를 올렸을 때 strong
+
+.prev strong:hover
+prev의 자식요소인 strong에 마우스를 올렸을 때 */
+
+.prev:hover strong {
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+.prev:hover::before {
+	transform: rotate(-180deg);
+	transition: all 0.5s;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform-origin: center;
+}
+
+.prev:hover::after {
+	transform: rotate(180deg);
+	transition: all 0.5s;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	transform-origin: center;
+}
+
+.next {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+	position: relative;
+	margin: 20px;
+	float: left;
+}
+
+.next::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: rotate(30deg);
+	transform-origin: right center;
+}
+
+.next::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	bottom: 50%;
+	right: 0;
+	transform: rotate(-30deg);
+	transform-origin: right center;
+}
+
+.next strong {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-200%, -50%);
+	/* 여기 쓰인 transform은 시작점의 포지션 제대로 잡기 위해 써준 좌표 */
+	transition: all 0.5s;
+	opacity: 0;
+}
+
+.next:hover strong {
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+
+.next:hover::before {
+	transform: rotate(180deg);
+	transition: all 0.5s;
+	position: absolute;
+	top: 0%;
+	transform-origin: center;
+}
+
+.next:hover::after {
+	transform: rotate(-180deg);
+	transition: all 0.5s;
+	position: absolute;
+	bottom: 0%;
+	transform-origin: center;
+}

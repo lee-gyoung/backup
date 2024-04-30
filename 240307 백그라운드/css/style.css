@@ -1,0 +1,46 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+div {
+	width: 400px;
+	height: 400px;
+	border: 1px solid #000;
+	float: left;
+}
+
+.box1 img {
+	width: 100%;
+	height: 100%;
+	/* img태그는 인라인블록 속성이기 때문에 너비, 높이 값 부여 가능 */
+	object-fit: fill;
+	/* 기본값으로 부여된 fill
+    요소의 비율을 무시하고 해당 너비로 채우는 것 */
+}
+
+.box2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* contain은 이미지의 비율을 유지하면서
+    가로 너비를 채워서 삽입함, 따라서 위 아래 여백이 생길 수 있음
+    이미지의 좌우에 중요한 컨텐츠가 있고 위아래는 중요하지 않거나
+    의미없는 여백일 때 이 방법이 더 좋을 수 있음 */
+}
+
+.box3 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* cover는 이미지의 비율을 유지하면서
+    세로 너비를 채워서 삽입함, 따라서 좌우 여백이 생길 수 있음 */
+}

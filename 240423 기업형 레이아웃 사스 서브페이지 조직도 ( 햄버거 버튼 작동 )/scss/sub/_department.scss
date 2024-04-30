@@ -1,0 +1,80 @@
+.department {
+	.sub_visual {
+		background-image: url(../img/brand4.jpg);
+		// 이미지 경로는 css 기준에서 작성하는 것 기억하기
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.inner {
+		.wrap {
+			width: 100%;
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			article {
+				width: 380px;
+				float: left;
+				margin-right: 20px;
+				margin-top: 50px;
+				&:nth-of-type(3n) {
+					margin-right: 0px;
+				}
+				.pic {
+					width: 100%;
+					height: 380px;
+					border-radius: 50%;
+					overflow: hidden;
+					background-color: #000;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						opacity: 0.7;
+						transition: all 0.3s;
+					}
+					&:hover {
+						img {
+							opacity: 1;
+						}
+					}
+				}
+				h3 {
+					text-align: center;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					font: bold 25px/1 'arial';
+					color: #555;
+				}
+				p {
+					text-align: center;
+					font: 16px/1.2 'arial';
+					color: #aaa;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.department {
+		.inner {
+			.wrap {
+				width: 100%;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				article {
+					float: none;
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}

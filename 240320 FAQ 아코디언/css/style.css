@@ -1,0 +1,130 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f8ff;
+  width: 100%;
+  height: 100vh;
+}
+body .container {
+  margin: 0px 40px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .container h1 {
+  color: #333;
+}
+body .container .tab {
+  background-color: #fff;
+  padding: 0px 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+body .container .tab input[type=radio] {
+  /* 대상을 안보이게 하는 방법 
+              display: none; > 기능도 사라짐
+              opacity: 0; > 공간 차지도 하고 상호작용도 됨 보이지만 않음
+              visibility: hidden; > opacity와 흡사,
+              공간은 차지하지만 상호작용은 되지 않음
+              */
+  appearance: none;
+  /* display:none 과 opacity:0의 중간형태로 존재는 하지만
+              공간은 차지하지 않고 기능 사용 가능 */
+}
+body .container .tab input[type=radio]:checked + label::after {
+  color: red;
+}
+body .container .tab input[type=radio]:checked ~ .content {
+  max-height: 100vh;
+}
+body .container .tab input[type=radio]:checked ~ label h2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 100px;
+  transition: all 0.2s;
+  justify-content: flex-end;
+  padding: 20px;
+}
+body .container .tab input[type=radio]:checked ~ label h3 {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #eee;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+body .container .tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* 웹 접근성 : 클릭이 가능한 대상은 클릭을 할 수 있다는 정보를
+              전달하기 위해 커서 포인터를 써주어 표시함 */
+}
+body .container .tab label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.1);
+}
+body .container .tab label h2 {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+body .container .tab label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+body .container .tab .content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 1s;
+}
+body .container .tab .content p {
+  position: relative;
+  z-index: 10;
+  padding: 17px 0px;
+  color: #eee;
+}
+body .container .tab:nth-of-type(1) label h2 {
+  background: linear-gradient(135deg, #c94949, #93a857);
+}
+body .container .tab:nth-of-type(2) label h2 {
+  background: linear-gradient(135deg, #dfa21f, #b8d46a);
+}
+body .container .tab:nth-of-type(3) label h2 {
+  background: linear-gradient(135deg, #6b64d1, #1b29e9);
+}
+body .container .tab:nth-of-type(4) label h2 {
+  background: linear-gradient(135deg, #8a1e50, #4d344e);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 1180px;
+  position: relative;
+  margin: 0 auto;
+}
+.wrap #visual {
+  width: 100%;
+  position: relative;
+  /*
+        height : 고정된 값, 넘치면 잘리거나 삐져나가게 됨
+        min-height : 유동적인 값, 최소 높이값을 지정해주고
+        넘치면 늘어나는 성질이 있음
+        max-height : 유동적인 값, 최대값이 정해져 있어서
+        처음에는 height값이 부여되지 않은 것처럼 보이지만
+        부여된 max-height값을 넘으면 넘친 부분을 자르거나 삐져나가게 됨
+        */
+}
+.wrap #visual header {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap #visual header h1 {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.wrap #visual header ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+}
+.wrap #visual header ul li a {
+  font: 15px/1 "arial";
+  color: #333;
+}
+.wrap #visual header ul li:nth-of-type(3) {
+  padding: 5px 15px;
+  border: 1px solid #999;
+}
+.wrap #visual .visual_part {
+  width: 100%;
+}
+.wrap #visual .visual_part img {
+  width: 100%;
+  height: 100%;
+}
+.wrap #visual .visual_part h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: bold 80px/1 "arial";
+  color: #333;
+}
+.wrap .content1 {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 30px 0px;
+}
+.wrap .content1 .content1_part {
+  width: 100%;
+  padding: 50px 0px;
+}
+.wrap .content1 .content1_part h3 {
+  font: bold 30px/1 "arial";
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+.wrap .content1 .content1_part h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #555;
+  margin: 30px auto 0px;
+}
+.wrap .content1 .content1_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .content1 .content1_list article {
+  width: 280px;
+  background-color: #fff;
+  border: 4px solid transparent;
+  padding-bottom: 30px;
+}
+.wrap .content1 .content1_list article img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 40px;
+}
+.wrap .content1 .content1_list article:hover {
+  border: 4px solid #999;
+}
+.wrap .content1 .content1_list article .txt {
+  padding: 20px;
+  text-align: center;
+}
+.wrap .content1 .content1_list article .txt span {
+  font: 15px/1.5 "arial";
+  color: #555;
+}
+.wrap .content1 .content1_list article .txt::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #555;
+  margin: 0 auto 30px;
+}
+.wrap .content2 {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .content2 .about:hover img {
+  opacity: 0.6;
+}
+.wrap .content2 article {
+  width: 600px;
+}
+.wrap .content2 article h3 {
+  text-align: center;
+  font: bold 30px/1 "arial";
+  color: #333;
+}
+.wrap .content2 article h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #555;
+  margin: 30px auto 0px;
+}
+.wrap .content2 article .text {
+  padding: 50px 80px;
+}
+.wrap .content2 article .text p {
+  font: 15px/1.5 "arial";
+  color: #555;
+  text-align: center;
+}
+.wrap footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aaa;
+}
+.wrap footer .copy {
+  margin-left: 40px;
+}
+.wrap footer .copy span {
+  font: 15px/1 "arial";
+  color: #fff;
+}
+.wrap footer .sns {
+  margin-right: 40px;
+}
+.wrap footer .sns img {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
