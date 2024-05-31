@@ -1,0 +1,187 @@
+@charset "utf-8";
+@import './font';
+@import './reset';
+@import './mixin';
+
+body {
+	background-color: #efefef;
+	header {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 400px;
+		height: 100%;
+		background: linear-gradient(45deg, rgb(0, 183, 255), rgb(76, 65, 225));
+		h1 {
+			position: absolute;
+			top: 50%;
+			left: 50px;
+			transform: translateY(-150%);
+			font: bold 50px/1 $mainFont;
+			// font : {
+			// 	size: 50px;
+			// 	weight: bold;
+			// 	family: $mainFont;
+			// }
+			//sass버전에서만 사용할수있는 사스전용 객체표현방법
+			color: #fff;
+			letter-spacing: 1px;
+			&::before {
+				content: 'UI/UX DEVELOPMENT';
+				font: 14px/1 $mainFont;
+				color: #fff;
+				letter-spacing: 2px;
+				opacity: 0.8;
+				position: absolute;
+				top: 100px;
+				left: 0;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 150px;
+				height: 2px;
+				background-color: #fff;
+				margin-top: 20px;
+			}
+		}
+		ul {
+			position: absolute;
+			bottom: 100px;
+			left: 40px;
+			li {
+				float: left;
+				margin-right: 10px;
+				a {
+					font-size: 20px;
+					color: #fff;
+				}
+			}
+		}
+	}
+	main {
+		margin-left: 400px;
+		padding: 20px;
+		ul {
+			width: 100%;
+			@include clear;
+			margin-bottom: 20px;
+			li {
+				float: right;
+				margin-right: 20px;
+				width: 100px;
+				height: 26px;
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					font: bold 7px/26px $mainFont;
+					color: #aaa;
+					background-color: #fff;
+					border-radius: 5px;
+					text-align: center;
+					letter-spacing: 1px;
+				}
+				&.on {
+					a {
+						background: linear-gradient(45deg, #67faf3, #58abf8);
+						color: #fff;
+					}
+				}
+			}
+		}
+		section {
+			width: 100%;
+			@include clear;
+			article {
+				width: 20%;
+				float: left;
+				padding: 12px;
+				// background-color: #58abf8;
+				div {
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+					padding: 14px;
+					border-radius: 4px;
+					img {
+						width: 100%;
+					}
+					h2 {
+						font: bold 11px/1 $mainFont;
+						margin: 15px 0px 5px;
+						letter-spacing: 1px;
+						color: #444;
+					}
+					p {
+						font: 10px/1 $subFont;
+						color: #444;
+						letter-spacing: 1px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1599px) {
+	body {
+		header {
+			width: 350px;
+		}
+		main {
+			margin-left: 350px;
+			section {
+				article {
+					width: 25%;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1199px) {
+	body {
+		header {
+			position: relative;
+			width: 100%;
+			height: 80px;
+			h1 {
+				transform: translateY(-50%);
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+			ul {
+				display: none;
+			}
+		}
+		main {
+			width: 100%;
+			margin-left: 0px;
+		}
+	}
+}
+@media screen and (max-width: 539px) {
+	body {
+		main {
+			ul {
+				margin-right: 0px;
+				padding: 0 13px;
+				li {
+					width: 32%;
+					margin-right: 2%;
+					&:nth-of-type(1) {
+						margin-right: 0%;
+					}
+				}
+			}
+			section {
+				article {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #333;
+}
+
+.container {
+	width: 500px;
+	height: 500px;
+	background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	.wave {
+		width: 1000px;
+		height: 1025px;
+		background-color: rgba(255, 255, 255, 0.75);
+		position: absolute;
+		top: -25%;
+		left: 50%;
+		border-radius: 35%;
+		margin-top: -500px;
+		margin-left: -500px;
+		animation: wave 15s infinite linear;
+	}
+	.wavy {
+		width: 1100px;
+		height: 1175px;
+		position: absolute;
+		top: 175%;
+		left: 50%;
+		margin-left: -500px;
+		margin-top: -500px;
+		background-color: rgba(156, 179, 245, 0.5);
+		border-radius: 35%;
+		animation: wave 20s infinite linear;
+		z-index: 3;
+	}
+	.wavyblue {
+		width: 800px;
+		height: 1150px;
+		background-color: rgba(146, 189, 255, 0.5);
+		border-radius: 35%;
+		position: absolute;
+		top: -20%;
+		left: 50%;
+		margin-bottom: -500px;
+		margin-right: -500px;
+		animation: wave 12s infinite linear;
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	padding: 80px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.card {
+		width: 350px;
+		height: 180px;
+		background-color: #fff;
+		position: relative;
+		transition: all 0.5s;
+		&:hover {
+			height: 450px;
+		}
+		.lines {
+			inset: 0;
+			background-color: #000;
+			position: absolute;
+			overflow: hidden;
+			&::before {
+				content: '';
+				display: block;
+				width: 600px;
+				height: 120px;
+				background: linear-gradient(
+					transparent,
+					#45f3ff,
+					#45f3ff,
+					#45f3ff,
+					transparent
+				);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: ani 4s linear infinite;
+			}
+			&::after {
+				content: '';
+				inset: 3px;
+				background-color: #292929;
+				position: absolute;
+			}
+		}
+		&:hover {
+			.lines {
+				&::before {
+					animation-play-state: paused;
+					// 호버했을 시 동작이 멈춤
+					// play-state는 paused와 running만 기억해도 됨
+					// 사용 빈도는 낮은 편
+				}
+			}
+		}
+	}
+}
+
+@keyframes ani {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
