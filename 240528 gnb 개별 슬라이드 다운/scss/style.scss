@@ -1,0 +1,82 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+header {
+	width: 100%;
+	.inner {
+		width: 1000px;
+		height: 150px;
+		margin: 0 auto;
+		position: relative;
+		h1 {
+			position: absolute;
+			left: 8px;
+			bottom: 20px;
+			a {
+				font: bold 30px/1 'arial';
+				color: #333;
+			}
+		}
+		#gnb {
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			> li {
+				float: left;
+				// 지금의 경우 전체 컨텐츠를 absolute로 위치 잡아주었기 때문에
+				// 플롯 해제를 할 필요가 없음
+				position: relative;
+				> a {
+					display: block;
+					width: 150px;
+					height: 60px;
+					font: bold 16px/60px 'arial';
+					color: #333;
+					text-align: center;
+					&:hover {
+						background-color: #333;
+						color: #fff;
+					}
+					&.on {
+						background-color: #333;
+						color: #fff;
+					}
+				}
+				> ul {
+					position: absolute;
+					top: 60px;
+					left: 0px;
+					display: none;
+					> li {
+						a {
+							display: block;
+							width: 150px;
+							height: 50px;
+							background-color: #333;
+							font: 12px/50px 'arial';
+							color: #bbb;
+							text-align: center;
+						}
+						&:hover {
+							a {
+								background-color: #000;
+								color: orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

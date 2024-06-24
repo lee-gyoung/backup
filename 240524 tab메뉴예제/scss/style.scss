@@ -1,0 +1,113 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#contents_menu {
+	width: 100%;
+	padding: 50px 0px;
+	// border: 1px solid #333;
+	// 마진 역상속 해결하는 두가지 방법
+	// 부모에 패딩 주거나, 보더를 부여하면 됨(이건 버그로 버그 해결 하는 것)
+	.inner {
+		width: 1200px;
+		margin: 0px auto;
+		#title {
+			display: flex;
+			justify-content: space-between;
+			h2 {
+				font-size: 30px;
+				font-weight: 200;
+				span {
+					font-weight: 800;
+				}
+			}
+			ul {
+				display: flex;
+				width: 40%;
+				justify-content: space-between;
+				li {
+					width: 30%;
+					height: 40px;
+					text-align: center;
+					line-height: 40px;
+					font-size: 18px;
+					border-radius: 20px;
+					cursor: pointer;
+					&.active {
+						background-color: purple;
+						color: #fff;
+					}
+					&:hover {
+						background-color: plum;
+					}
+				}
+			}
+		}
+		> ul {
+			display: none;
+			&.active {
+				display: flex;
+			}
+			li {
+				width: 25%;
+				margin: 10px 0px;
+				position: relative;
+				padding-bottom: 20px;
+				text-align: center;
+				// li의 자속요소 모두 적용가능
+				a {
+					opacity: 0;
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.2);
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					border: 3px solid purple;
+					transition: all 0.5s;
+					i {
+						display: block;
+						width: 70px;
+						height: 70px;
+						background-color: purple;
+						font-size: 40px;
+						color: #fff;
+						border-radius: 50%;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						line-height: 70px;
+					}
+				}
+				&:hover {
+					a {
+						opacity: 1;
+					}
+				}
+				.img_wrap {
+					width: 90%;
+					margin: 0 auto;
+					h3 {
+						font-size: 18px;
+						font-weight: 500;
+						margin-bottom: 5px;
+					}
+					p {
+						font-weight: 300;
+					}
+				}
+			}
+		}
+	}
+}

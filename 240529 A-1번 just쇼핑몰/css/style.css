@@ -1,0 +1,279 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* popup 코드 */
+.popup {
+	display: none;
+	width: 500px;
+	min-height: 200px;
+	background-color: #f8f8f8;
+	border: 2px solid #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	border-radius: 5px;
+	z-index: 10;
+}
+.popup h1 {
+	font: bold 27px/1 '맑은 고딕';
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
+.popup p {
+	font: normal 18px/1.5 '맑은 고딕';
+	color: #555;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.popup button {
+	display: block;
+	width: 100%;
+	padding: 5px 10px;
+	background-color: #333;
+	color: #eee;
+	font: bold 14px/1 '맑은 고딕';
+}
+
+/* header 영역 */
+header {
+	width: 100%;
+}
+header .inner {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	height: 100px;
+}
+header .inner h1 {
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+}
+header .inner .wrap #gnb {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	background-color: #fff;
+	z-index: 9;
+	display: flex;
+}
+header .inner .wrap #gnb li {
+	text-align: center;
+	position: relative;
+}
+header .inner .wrap #gnb li a {
+	display: block;
+	width: 150px;
+	height: 60px;
+	font: bold 25px/60px 'arial';
+	color: #333;
+}
+header .inner .wrap #gnb li a:hover {
+	background-color: #333;
+	color: #fff;
+}
+header .inner .wrap #gnb li a.on {
+	background-color: #333;
+	color: #fff;
+}
+header .inner #gnb > li > .sub {
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	display: none;
+}
+header .inner #gnb > li > .sub > li > a {
+	display: block;
+	width: 150px;
+	height: 50px;
+	font: normal 16px/50px '맑은 고딕';
+	color: #888;
+	background-color: #555;
+	text-align: center;
+}
+header .inner #gnb > li > .sub > li > a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+/* slide 영역 */
+#slide {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+#slide .frame {
+	width: 1200px;
+	margin: 0 auto;
+	height: 900px;
+	position: relative;
+	/* js에서 top을 부여하기 위함 */
+}
+
+/* contentBox 영역 */
+#contentBox {
+	width: 100%;
+}
+#contentBox .inner {
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+	display: flex;
+}
+#contentBox .inner .NGboard {
+	flex: 1.5;
+	overflow: hidden;
+}
+#contentBox .inner .NGboard .tab {
+	display: flex;
+	width: 100%;
+	height: 50px;
+}
+#contentBox .inner .NGboard .tab li {
+	width: 100px;
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#contentBox .inner .NGboard .tab li a {
+	font: bold 15px/1 '맑은 고딕';
+	color: #fff;
+}
+#contentBox .inner .NGboard .tab li.on {
+	background-color: #fff;
+	
+}
+#contentBox .inner .NGboard .tab li.on a {
+	color: #333;
+}
+#contentBox .inner .NGboard .content {
+	width: 100%;
+	height: 150px;
+	position: relative;
+}
+#contentBox .inner .NGboard .content div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	z-index: 1;
+}
+#contentBox .inner .NGboard .content div.on {
+	opacity: 1;
+	z-index: 2;
+}
+#contentBox .inner .NGboard .content #notice {
+	justify-content: flex-start;
+}
+#contentBox .inner .NGboard .content #notice ul {
+	width: 100%;
+}
+#contentBox .inner .NGboard .content #notice ul li {
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	cursor: pointer;
+}
+#contentBox .inner .NGboard .content #notice ul li a {
+	font: 13px/30px '맑은 고딕';
+	color: #333;
+	margin-left: 30px;
+}
+#contentBox .inner .NGboard .content #notice ul li span {
+	font: 10px/30px 'arial';
+	color: #333;
+	margin-right: 30px;
+}
+#contentBox .inner .NGboard .content #notice ul li:hover {
+	background-color: #eee;
+}
+
+#contentBox .inner .banner {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#contentBox .inner .banner img {
+	width: 100%;
+	height: 100%;
+}
+
+#contentBox .inner .baro {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 5px;
+}
+#contentBox .inner .baro a {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+#contentBox .inner .baro a span {
+	font: 10px/1 '맑은 고딕';
+	text-align: center;
+	color: #333;
+}
+
+/* footer 영역 */
+footer {
+	width: 100%;
+}
+footer .inner {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .inner .logo {
+	flex: 1.5;
+	display: flex;
+	justify-content: center;
+	
+}
+footer .inner .copyright {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+	
+}
+footer .inner .copyright span {
+	font: bold 12px/1 'arial';
+	color: #333;
+}
+footer .inner .sns {
+	flex: 1;
+	display: flex;
+	justify-content: space-evenly;
+	
+}

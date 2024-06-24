@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#contents_menu {
+  width: 100%;
+  padding: 50px 0px;
+}
+#contents_menu .inner {
+  width: 1200px;
+  margin: 0px auto;
+}
+#contents_menu .inner #title {
+  display: flex;
+  justify-content: space-between;
+}
+#contents_menu .inner #title h2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+#contents_menu .inner #title h2 span {
+  font-weight: 800;
+}
+#contents_menu .inner #title ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+#contents_menu .inner #title ul li {
+  width: 30%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#contents_menu .inner #title ul li.active {
+  background-color: purple;
+  color: #fff;
+}
+#contents_menu .inner #title ul li:hover {
+  background-color: plum;
+}
+#contents_menu .inner > ul {
+  display: none;
+}
+#contents_menu .inner > ul.active {
+  display: flex;
+}
+#contents_menu .inner > ul li {
+  width: 25%;
+  margin: 10px 0px;
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#contents_menu .inner > ul li a {
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 3px solid purple;
+  transition: all 0.5s;
+}
+#contents_menu .inner > ul li a i {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: purple;
+  font-size: 40px;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 70px;
+}
+#contents_menu .inner > ul li:hover a {
+  opacity: 1;
+}
+#contents_menu .inner > ul li .img_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+#contents_menu .inner > ul li .img_wrap h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#contents_menu .inner > ul li .img_wrap p {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */
